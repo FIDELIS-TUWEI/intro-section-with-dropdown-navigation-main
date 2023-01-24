@@ -108,45 +108,48 @@ hamburger.appendChild(bar3);
 const heroMain = document.createElement('main');
 document.body.append(heroMain);
 
-// Hero container
-const heroDiv = document.createElement('div');
-heroDiv.setAttribute('class', 'container');
-heroMain.appendChild(heroDiv);
-
-// Hero image
+// Hero Image
 const heroImage = document.createElement('img');
+heroImage.setAttribute('class', 'hero__image');
 heroImage.setAttribute('src', '/images/image-hero-mobile.png');
-heroDiv.appendChild(heroImage);
+heroMain.appendChild(heroImage);
 
-// Section
-const section = document.createElement('section');
-document.body.append(section);
+// article
+const article = document.createElement('div');
+article.setAttribute('class', 'article');
+heroMain.appendChild(article);
 
-// div section
-const sectionDiv = document.createElement('div');
-sectionDiv.setAttribute('class', 'container');
-section.appendChild(sectionDiv);
+// Text content
+const articleText = document.createElement('div');
+articleText.setAttribute('class', 'text__content');
+article.appendChild(articleText);
 
-// Header title
-const h1Title = document.createElement('h1');
-h1Title.innerHTML = `Make remote work`;
-sectionDiv.appendChild(h1Title);
+// h1
+const textHeader = document.createElement('h1');
+textHeader.innerHTML = `Make remote work`;
+articleText.appendChild(textHeader);
 
-// paragraph
-const paragraph = document.createElement('p');
-paragraph.innerHTML = `Get your team in sync, no matter your location. Streamline processes, 
+// text paragraph
+const textParagraph = document.createElement('p');
+textParagraph.innerHTML = `Get your team in sync, no matter your location. Streamline processes, 
 create team rituals, and watch productivity soar.`;
-sectionDiv.appendChild(paragraph);
+articleText.appendChild(textParagraph);
 
-// learn more link
-const learnLink = document.createElement('a');
-learnLink.setAttribute('id', 'learn__link');
-learnLink.innerHTML = `Learn more`;
-sectionDiv.appendChild(learnLink);
+// Learn more btn
+const learnBtn = document.createElement('a');
+learnBtn.setAttribute('class', 'learn__btn');
+learnBtn.innerHTML = `Learn more`;
+article.appendChild(learnBtn);
+
+// Hero Image
+const desktop = document.createElement('img');
+desktop.setAttribute('src', '/images/image-hero-desktop.png');
+desktop.setAttribute('class', 'hero__image2');
+heroMain.appendChild(desktop);
 
 // Footer
 const footer = document.createElement('footer');
-document.body.append(footer);
+heroMain.appendChild(footer);
 
 // Footer nav
 const footerNav = document.createElement('nav');
