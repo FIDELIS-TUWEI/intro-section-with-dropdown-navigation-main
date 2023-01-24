@@ -69,7 +69,7 @@ list4.appendChild(link4);
 // list item 5 - navbar
 const list5 = document.createElement('li');
 list5.setAttribute('class', 'nav__item')
-navBar.appendChild(list5);
+navMenu.appendChild(list5);
 
 // <a> to list 5
 const link5 = document.createElement('a');
@@ -82,17 +82,35 @@ list5.appendChild(link5);
 const registerBtn = document.createElement('button');
 registerBtn.setAttribute('class', 'register__btn');
 registerBtn.innerText = `Register`;
-navBar.appendChild(registerBtn);
+navMenu.appendChild(registerBtn);
 
+// hamburger
+const hamburger = document.createElement('div');
+hamburger.setAttribute('class', 'hamburger__menu');
+navBar.appendChild(hamburger);
+
+// hamburger - bar 1
+const bar1 = document.createElement('span');
+bar1.setAttribute('class', 'bar');
+hamburger.appendChild(bar1);
+
+// hamburger - bar 2
+const bar2 = document.createElement('span');
+bar2.setAttribute('class', 'bar');
+hamburger.appendChild(bar2);
+
+// hamburger - bar 3
+const bar3 = document.createElement('span');
+bar3.setAttribute('class', 'bar');
+hamburger.appendChild(bar3);
 
 // Hero section
 const heroMain = document.createElement('main');
-heroMain.setAttribute('class', 'conatiner');
 document.body.append(heroMain);
 
 // Hero container
 const heroDiv = document.createElement('div');
-heroDiv.setAttribute('class', 'hero');
+heroDiv.setAttribute('class', 'container');
 heroMain.appendChild(heroDiv);
 
 // Hero image
@@ -102,12 +120,11 @@ heroDiv.appendChild(heroImage);
 
 // Section
 const section = document.createElement('section');
-section.setAttribute('class', 'container');
 document.body.append(section);
 
 // div section
 const sectionDiv = document.createElement('div');
-sectionDiv.setAttribute('class', 'text__content');
+sectionDiv.setAttribute('class', 'container');
 section.appendChild(sectionDiv);
 
 // Header title
