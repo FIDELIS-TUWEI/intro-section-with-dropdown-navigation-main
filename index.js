@@ -109,31 +109,30 @@ const heroMain = document.createElement('main');
 document.body.append(heroMain);
 
 // Hero Image
+const divContainer = document.createElement('div');
+divContainer.setAttribute('class', 'container');
+heroMain.appendChild(divContainer);
+
 const heroImage = document.createElement('img');
 heroImage.setAttribute('class', 'hero__image');
 heroImage.setAttribute('src', '/images/image-hero-mobile.png');
-heroMain.appendChild(heroImage);
+divContainer.appendChild(heroImage);
 
 // article
 const article = document.createElement('div');
 article.setAttribute('class', 'article');
-heroMain.appendChild(article);
-
-// Text content
-const articleText = document.createElement('div');
-articleText.setAttribute('class', 'text__content');
-article.appendChild(articleText);
+divContainer.appendChild(article);
 
 // h1
 const textHeader = document.createElement('h1');
 textHeader.innerHTML = `Make remote work`;
-articleText.appendChild(textHeader);
+article.appendChild(textHeader);
 
 // text paragraph
 const textParagraph = document.createElement('p');
 textParagraph.innerHTML = `Get your team in sync, no matter your location. Streamline processes, 
 create team rituals, and watch productivity soar.`;
-articleText.appendChild(textParagraph);
+article.appendChild(textParagraph);
 
 // Learn more btn
 const learnBtn = document.createElement('a');
@@ -145,11 +144,11 @@ article.appendChild(learnBtn);
 const desktop = document.createElement('img');
 desktop.setAttribute('src', '/images/image-hero-desktop.png');
 desktop.setAttribute('class', 'hero__image2');
-heroMain.appendChild(desktop);
+divContainer.appendChild(desktop);
 
 // Footer
 const footer = document.createElement('footer');
-heroMain.appendChild(footer);
+article.appendChild(footer);
 
 // Footer nav
 const footerNav = document.createElement('nav');
